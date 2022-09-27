@@ -14,7 +14,7 @@ export const generateWordSet = async() => {
     let todaysWord;
     await fetch(wordList).then(response => response.text())
     .then(result => {
-        const arr = result.split("\r\n");
+        const arr = result.split("\n");
         todaysWord = arr[Math.floor(Math.random() * arr.length)];
         wordSet = new Set(arr);
     });
